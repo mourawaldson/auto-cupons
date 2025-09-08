@@ -1,4 +1,4 @@
-h2. "Auto Cupons":https://chrome.google.com/webstore/detail/
+h2. "Auto Cupons":https://chromewebstore.google.com/detail/auto-cupons/dflhncaeodojoeachbghajeehmcnhelf
 
 h3. A Chrome extension that automatically applies all available coupons on coupon listing pages, navigating through pages until the end.
 
