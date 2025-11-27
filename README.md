@@ -33,7 +33,6 @@ A extensão está disponível oficialmente na Chrome Web Store:
 ## 🔧 Permissões explicadas
 - **activeTab** — Necessário para permitir que o script rode apenas após o clique no botão "Iniciar Auto Cupons".
 - **scripting** — Usado para injetar o código que aplica os cupons.
-- **Host permission (mercadolivre.com.br)** — Permite que a extensão funcione somente nas páginas de cupons do Mercado Livre.
 - **Sem código remoto** — Toda a lógica está dentro da extensão.
 
 ---
