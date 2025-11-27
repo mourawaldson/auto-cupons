@@ -2,18 +2,83 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <title>Auto Coupons</title>
   <style>
-    body { font-family: Arial, sans-serif; width: 220px; padding: 10px; }
-    .ad { margin-bottom: 10px; padding: 8px; border: 1px solid #ddd; border-radius: 6px; text-align: center;}
-    .btn { background: #007bff; color: #fff; border: none; padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; font-size: 14px;}
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      width: 240px;
+      padding: 14px;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    .ad {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 12px;
+    }
+
+    .ad strong {
+      color: #222;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .ad a {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffcc00, #ff9900);
+      color: #111;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .ad a:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #005fcf;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #777;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <div class="ad">
-    <strong>Confira essa oferta!</strong><br>
-    <a href="https://mercadolivre.com/sec/14tazNY" target="_blank">Clique aqui e aproveite!</a>
+  <div class="ad" id="adContainer">
+    <strong id="adTitle">Carregando oferta...</strong>
+    <a id="adLink" href="#" target="_blank" rel="noopener noreferrer">Ver oferta</a>
   </div>
+
   <button class="btn" id="start">Iniciar Auto Cupons</button>
+
+  <footer>Economize mais com Auto Coupons 💰</footer>
+
   <script src="popup.js"></script>
 </body>
 </html>
