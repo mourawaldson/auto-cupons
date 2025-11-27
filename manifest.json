@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Auto Cupons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Aplica automaticamente todos os cupons com botão de iniciar manual e tem continuidade automática entre páginas.",
   "permissions": ["scripting", "activeTab"],
   "action": {

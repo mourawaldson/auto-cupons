@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auto Coupons – Cupons automáticos e ofertas Mercado Livre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Use a extensão Auto Coupons para aplicar cupons automaticamente no Mercado Livre e confira ofertas extras, promoções e anúncios selecionados para economizar ainda mais." />
+
+  <meta property="og:title" content="Auto Coupons – Cupons automáticos e ofertas Mercado Livre" />
+  <meta property="og:description" content="Economize mais com cupons automáticos e uma seleção de ofertas especiais, atualizadas regularmente." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mourawaldson.github.io/auto-cupons/" />
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=SEU_CLIENTE"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #007bff;
+      --bg: #f7f8fb;
+      --card-bg: #ffffff;
+      --text-main: #222;
+      --text-muted: #666;
+      --accent: #ffb300;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    header {
+      padding: 16px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid #e3e4ea;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    header .logo span {
+      color: var(--primary);
+    }
+
+    header .tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e3f2ff, #ffffff);
+      border-radius: 12px;
+      padding: 20px 16px;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 123, 255, 0.08);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 24px 0 8px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .ad-block {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      margin-bottom: 18px;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .offer-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .offer-tag {
+      font-size: 11px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .offer-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .offer-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .offer-cta {
+      margin-top: 8px;
+      align-self: flex-start;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ffcc00, #ff9800);
+      color: #111;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      padding: 16px 0 24px;
+    }
+
+    /* Oferta em Destaque */
+    .highlight {
+      border-left: 4px solid #ff9800;
+      padding-left: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div>
+    <div class="logo">Auto <span>Coupons</span></div>
+    <div class="tagline">Mais descontos com cupons automáticos</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span>💸</span> Cupons + Ofertas Exclusivas
+    </div>
+    <h1>Economize ainda mais no Mercado Livre com cupons automáticos</h1>
+    <p>
+      A extensão <strong>Auto Coupons</strong> encontra e aplica cupons automaticamente para você.  
+      Aqui nesta página você também encontra <strong>ofertas extras</strong> que combinam com cupons, além de anúncios relevantes que ajudam a manter o projeto gratuito.
+    </p>
+  </section>
+
+  <!-- OFERTA EM DESTAQUE (Layout 1) -->
+  <h2 class="section-title">Oferta em destaque 💥</h2>
+  <section class="offer-card highlight">
+    <div class="offer-tag">Oferta Especial</div>
+    <div class="offer-title">Produtos mais vendidos do dia no Mercado Livre</div>
+    <div class="offer-desc">
+      Esta página reúne itens com alto volume de venda e grande chance de oferecer descontos acumuláveis com cupons.
+    </div>
+    <a class="offer-cta"
+       href="https://mercadolivre.com/sec/OFERTAS_DO_DIA"
+       target="_blank" rel="noopener noreferrer">
+      Ver ofertas do dia <span>➜</span>
+    </a>
+  </section>
+
+  <!-- ADSENSE 1 -->
+  <h2 class="section-title">Anúncio patrocinado</h2>
+  <p class="section-subtitle">Conteúdo exibido pelo Google AdSense.</p>
+
+  <div class="ad-block">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="SEU_CLIENTE"
+         data-ad-slot="SEU_SLOT_1"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- OFERTAS RECOMENDADAS -->
+  <h2 class="section-title">Ofertas recomendadas para usar com cupons</h2>
+  <p class="section-subtitle">
+    Categorias populares no Mercado Livre que frequentemente combinam com cupons automáticos.
+  </p>
+
+  <section class="offers-grid">
+    <!-- Oferta 1 -->
+    <article class="offer-card">
+      <div class="offer-tag">Eletrônicos</div>
+      <div class="offer-title">Tecnologia e gadgets com desconto</div>
+      <div class="offer-desc">Smartwatches, fones, acessórios e mais — ótimos para combinar com cupons.</div>
+      <a class="offer-cta"
+         href="https://mercadolivre.com/sec/ELETRONICOS"
+         target="_blank" rel="noopener noreferrer">
+        Ver eletrônicos <span>➜</span>
+      </a>
+    </article>
+
+    <!-- Oferta 2 -->
+    <article class="offer-card">
+      <div class="offer-tag">Casa & decoração</div>
+      <div class="offer-title">Ofertas para sua casa</div>
+      <div class="offer-desc">Itens úteis e decorativos com bons descontos sazonais.</div>
+      <a class="offer-cta"
+         href="https://mercadolivre.com/sec/HOMEDEALS"
+         target="_blank" rel="noopener noreferrer">
+        Ver ofertas para casa <span>➜</span>
+      </a>
+    </article>
+
+    <!-- Oferta 3 -->
+    <article class="offer-card">
+      <div class="offer-tag">Moda & estilo</div>
+      <div class="offer-title">Roupas e acessórios em promoção</div>
+      <div class="offer-desc">Moda, calçados e acessórios frequentemente elegíveis para cupons.</div>
+      <a class="offer-cta"
+         href="https://mercadolivre.com/sec/MODAEACESSORIOS"
+         target="_blank" rel="noopener noreferrer">
+        Ver moda e estilo <span>➜</span>
+      </a>
+    </article>
+  </section>
+
+  <!-- COMO USAR A EXTENSÃO (Layout 3) -->
+  <h2 class="section-title">Como aproveitar melhor o Auto Coupons</h2>
+  <p class="section-subtitle">
+    Para ter o máximo de economia:
+    <br><br>
+    1️⃣ Acesse uma página de cupons do Mercado Livre.<br>
+    2️⃣ Clique no ícone da extensão Auto Coupons.<br>
+    3️⃣ Pressione <strong>“Iniciar Auto Cupons”</strong>.<br>
+    4️⃣ A extensão aplicará todos os cupons e mudará de página automaticamente.<br>
+    5️⃣ Quando terminar, volte aqui para conferir as ofertas recomendadas.
+  </p>
+
+  <!-- ADSENSE 2 -->
+  <h2 class="section-title">Mais anúncios</h2>
+  <p class="section-subtitle">Ajude a manter o projeto gratuito.</p>
+
+  <div class="ad-block">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="SEU_CLIENTE"
+         data-ad-slot="SEU_SLOT_2"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+</main>
+
+<footer>
+  Auto Coupons não coleta dados pessoais. Links podem conter códigos de afiliado.
+</footer>
+
+</body>
+</html>
